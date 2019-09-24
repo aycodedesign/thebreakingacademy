@@ -3188,6 +3188,7 @@ img.hover-shadow {
 .s-staff {
     background-color: #0D0A0B;
     background-image: url("../images/vegas.webp");
+    background-image: url("../images/vegas.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
     padding-top: 9.6rem;
@@ -3484,6 +3485,8 @@ img.hover-shadow {
 .s-contact {
     background-color: #151515;
     background-image: url("../images/count-bg.webp");
+    background-image: url("../images/count-bg.jpg");
+
     /* background-repeat: no-repeat; */
     background-repeat: repeat;
     background-position: center, center;
