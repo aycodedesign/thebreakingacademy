@@ -1,65 +1,5 @@
-/* =================================================================== 
- *
- *  Hola v1.0 Main Stylesheet
- *  10-02-2017
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # webfonts and iconfonts
- *  # base style overrides
- *      ## links
- *  # typography & general theme styles
- *      ## lists
- *      ## responsive video container
- *      ## floated image
- *      ## tables
- *      ## spacing
- *      ## pace.js styles - minimal
- *  # forms
- *      ## style placeholder text
- *      ## Change Autocomplete styles in Chrome
- *  # buttons
- *  # additional components
- *      ## alert box
- *      ## additional typo styles
- *      ## skillbars
- *  # common and reusable theme styles 
- *      ## section intro
- *      ## blog-list
- *  # header styles
- *      ## header logo
- *      ## mobile menu toggle
- *      ## navigation
- *  # home
- *      ## home content
- *      ## home social
- *      ## home animations
- *  # about
- *      ## timeline
- *  # schedule
- *      ## bricks/masonry
- *  # staff
- *  # blog
- *  # cta
- *  # stats
- *  # contact
- *  # footer
- *      ## go to top
- *  # blog styles
- *      ## blog page header
- *      ## blog content
- *      ## comments
- *
- * =================================================================== */
-
-
-/* ===================================================================
- * # webfonts and iconfonts - (_document-setup.scss)
- *
- * ------------------------------------------------------------------- */
-
-@import url("iconic/css/iconmonstr-iconic-font.min.css");
-@import url("fonts.min.css");
+@import url("./iconic/css/iconmonstr-iconic-font.min.css");
+@import url("./fonts.min.css");
 
 
 
@@ -94,6 +34,96 @@ body {
     padding: 0;
 }
 
+/* POPUP */
+
+.overlay-popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay-popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    width: 50%;
+    /* position: relative; */
+    transition: all 1s ease-in-out;
+    height: auto;
+    position: absolute;
+    top: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #56D6D2;
+    /* font-family: Tahoma, Arial, sans-serif; */
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+}
+
+.popup .close:hover {
+    color: #56D6D2;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+    color: #000;
+    padding: 0 1em;
+}
+
+#popup1 a.btn {
+    color: #fff;
+    background-color: #56D6D2 !important;
+    border: none;
+}
+
+#popup1 a.btn:hover {
+    color: #000000;
+    background-color: #fff !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .popup {
+        margin: 100px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        width: 90%;
+        /* position: relative; */
+        transition: all 1s ease-in-out;
+        height: auto;
+        position: absolute;
+        top: 5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## links - (_document-setup.scss) 
@@ -114,8 +144,6 @@ a:active {
 a:focus {
     outline: none;
 }
-
-
 
 /* ===================================================================
  * # typography & general theme styles - (_document-setup.scss) 
@@ -460,8 +488,8 @@ dd {
 }
 
 a#location {
-    color: #000000;
-    text-decoration: underline;
+    color: rgb(18, 208, 221);
+    text-decoration: none;
     font-family: "librebaskerville-regular",
         serif;
 }
@@ -1402,13 +1430,13 @@ input::-moz-focus-inner {
     position: relative;
 }
 
-.section-intro.has-bottom-sep::after {
+/* .section-intro.has-bottom-sep::after {
     display: inline-block;
     height: 1px;
     width: 240px;
     background-color: rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+} */
 
 
 /* ------------------------------------------------------------------- 
@@ -2464,21 +2492,21 @@ img.hover-shadow {
     }
 
     tr {
-        border: 1px solid #ccc;
+        /* border: 1px solid #ccc; */
         color: #ffffff;
     }
 
     tr::before {
-        padding-left: 2em;
-        padding-top: 2em;
+        /* padding-left: 2em; */
+        /* padding-top: 2em; */
+        position: absolute;
+        left: 4em;
     }
 
     td {
-        /* border: 1px solid blue; */
-        /* border: none; */
         position: relative;
         padding-left: 200px;
-        margin-left: 150px;
+        margin-left: 50px;
     }
 
     td:before {
@@ -2489,24 +2517,35 @@ img.hover-shadow {
         padding-right: 40px;
         white-space: nowrap;
         margin-left: -150px;
-        /* outline: 1px red solid; */
     }
 
     .green {
         background-color: #56D7D2;
     }
 
-    .gray {
-        background-color: #ffffff;
-    }
-
     .green td {
         color: #ffffff;
+    }
+
+    .gray {
+        background-color: #ffffff;
     }
 
     .gray td,
     tr.gray::before {
         color: #56D7D2;
+    }
+
+    .new-item {
+        /* background-image: linear-gradient(-45deg, #f0f0f0, #56D7D2); */
+        outline: 10px solid #5BE3DE;
+
+        outline-offset: -10px;
+        background-color: #56D7D2;
+    }
+
+    .new-item td {
+        color: #ffffff;
     }
 
     tr::before {
@@ -2529,6 +2568,10 @@ img.hover-shadow {
 
     tr:nth-of-type(4):before {
         content: "Saturday";
+    }
+
+    tr.new-item:nth-of-type(1):before {
+        content: "Sunday";
     }
 
     ul.nav-social {
@@ -2681,6 +2724,11 @@ img.hover-shadow {
 
     ul.nav-social {
         display: contents;
+    }
+
+    tr::before {
+        position: absolute;
+        left: 3em;
     }
 }
 
@@ -2909,6 +2957,20 @@ img.hover-shadow {
     position: relative;
     min-height: 120rem;
 }
+
+#schedule .row {
+    padding: 1em 0px;
+}
+
+#schedule .container,
+.col-twelve {
+    padding: 0;
+}
+
+
+/* #schedule .col {
+    width: 40%;
+} */
 
 
 /* ------------------------------------------------------------------- 
@@ -3171,7 +3233,7 @@ img.hover-shadow {
     th:first-child,
     td:first-child,
     td {
-        padding-left: 0;
+        padding-left: 140px;
     }
 }
 

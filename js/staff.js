@@ -41,3 +41,26 @@ function showSlides(n) {
   // dots[slideIndex - 1].className += " active";
   // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+$(document).ready(function () {
+  $(function () {
+
+    $('#popup1').css("visibility", "visible");
+    $('#popup1').css("opacity", 1);
+
+  });
+
+  // x closes
+  $(".close").click(function () {
+
+    $('#popup1').css("visibility", "hidden");
+    $('#popup1').css("opacity", 0);
+  });
+
+  // button closes
+  $(".btn-close").click(function () {
+
+    $('#popup1').css("visibility", "hidden");
+    $('#popup1').css("opacity", 0);
+  });
+});
