@@ -2519,6 +2519,14 @@ img.hover-shadow {
         margin-left: -150px;
     }
 
+    .light-green {
+        background-color: #5BE3DE;
+    }
+
+    .light-green td {
+        color: #ffffff;
+    }
+
     .green {
         background-color: #56D7D2;
     }
