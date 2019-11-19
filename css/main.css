@@ -1901,6 +1901,8 @@ input::-moz-focus-inner {
     vertical-align: bottom;
     padding-bottom: 25rem;
     position: relative;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .home-content h1 {
@@ -1937,7 +1939,8 @@ input::-moz-focus-inner {
 
 .home-content img {
     width: 50%;
-    height: auto;
+    height: 50%;
+    /* new */
 }
 
 .home-content__main {
@@ -2021,8 +2024,8 @@ input::-moz-focus-inner {
     margin: 0;
     padding-bottom: 18rem;
     position: absolute;
-    bottom: 0;
-    right: 40px;
+    bottom: 30%;
+    right: 50px;
 }
 
 .home-social::after {
@@ -2045,6 +2048,7 @@ input::-moz-focus-inner {
 .home-social li {
     position: relative;
     height: 3.6rem;
+    padding: 2em 0;
 }
 
 .home-social i,
@@ -2057,7 +2061,7 @@ input::-moz-focus-inner {
 }
 
 .home-social i {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     right: 0;
     -webkit-transform: scale(0.7);
     -ms-transform: scale(0.7);
@@ -2265,8 +2269,9 @@ html.no-csstransitions .home-content__main {
 
 .mySlides p {
     font-family: "montserrat", sans-serif;
-    color: white;
-    padding-top: 2em;
+    /* color: white; */
+    color: #100E0F;
+    padding: 2em 4em;
 }
 
 .mySlides p.title {
@@ -2546,9 +2551,8 @@ img.hover-shadow {
 
     .new-item {
         /* background-image: linear-gradient(-45deg, #f0f0f0, #56D7D2); */
-        outline: 10px solid #5BE3DE;
-
-        outline-offset: -10px;
+        /* outline: 10px solid #5BE3DE;
+        outline-offset: -10px; */
         background-color: #56D7D2;
     }
 
@@ -2617,7 +2621,9 @@ img.hover-shadow {
 
     .home-content__buttons {
         position: static;
-        text-align: left;
+        /* text-align: left; */
+        text-align: center;
+        padding-bottom: 2em;
     }
 
     .home-content__buttons .btn {
@@ -2654,6 +2660,7 @@ img.hover-shadow {
 @media only screen and (max-width: 600px) {
     .home-content {
         padding-bottom: 15rem;
+        text-align: center;
     }
 
     .home-content h1 {
@@ -2685,6 +2692,11 @@ img.hover-shadow {
         padding: 2em 0;
     }
 
+    .home-content__buttons {
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .home-content__main {
         max-width: 380px;
         padding: 0;
@@ -2695,7 +2707,8 @@ img.hover-shadow {
     }
 
     .home-social {
-        padding-bottom: 10.8rem;
+        /* padding-bottom: 10.8rem; */
+        display: none;
     }
 
     .home-social::after {
