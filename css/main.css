@@ -491,15 +491,27 @@ dd {
     margin: 0 0 0 2rem;
 }
 
-a#location {
-    color: rgb(18, 208, 221);
+a#location-1 {
+    color: #ffffff;
     text-decoration: none;
     font-family: "librebaskerville-regular",
         serif;
 }
 
-a:hover#location {
-    color: #52D9D2;
+a#location-1:hover {
+    color: rgb(24, 114, 110) !important;
+}
+
+a#location-2 {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "librebaskerville-regular",
+        serif;
+}
+
+a#location-2:hover {
+    color: #916920 !important;
+
 }
 
 /* ------------------------------------------------------------------- 
@@ -2309,7 +2321,6 @@ html.no-csstransitions .home-content__main {
 
 .mySlides p {
     font-family: "montserrat", sans-serif;
-    /* color: white; */
     color: #100E0F;
     padding: 2em 4em;
 }
@@ -2336,7 +2347,6 @@ html.no-csstransitions .home-content__main {
     margin-bottom: 0;
 }
 
-
 .cursor {
     cursor: pointer;
 }
@@ -2360,6 +2370,7 @@ html.no-csstransitions .home-content__main {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.8);
     -webkit-user-select: none;
 }
 
@@ -2372,7 +2383,8 @@ html.no-csstransitions .home-content__main {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: #fff;
 }
 
 img {
@@ -2438,7 +2450,11 @@ img.hover-shadow {
     }
 
     .mySlides p {
-        padding: .5em 3em;
+        padding: .5em 2em;
+    }
+
+    .mySlides p.title {
+        text-align: center;
     }
 }
 
@@ -2509,6 +2525,7 @@ img.hover-shadow {
     .staff-row img {
         width: 32%;
         height: auto;
+        padding: 2rem 0;
     }
 
 
@@ -2849,7 +2866,7 @@ img.hover-shadow {
  * ------------------------------------------------------------------- */
 
 .s-about {
-    padding-top: 15rem;
+    padding-top: 10rem;
     padding-bottom: 9rem;
     background-color: #FFFFFF;
     position: relative;
@@ -3016,7 +3033,7 @@ img.hover-shadow {
  * ------------------------------------------------------------------- */
 
 .s-schedule {
-    padding-top: 15rem;
+    padding-top: 10rem;
     padding-bottom: 15.6rem;
     background-color: #f1f1f1;
     position: relative;
@@ -3248,10 +3265,6 @@ img.hover-shadow {
     .masonry__brick {
         width: 350px;
     }
-
-    .fa-map-marker {
-        color: black;
-    }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -3321,7 +3334,7 @@ img.hover-shadow {
     background-image: url("../images/vegas.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
-    padding-top: 9.6rem;
+    padding-top: 10rem;
     padding-bottom: 10.2rem;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
@@ -3620,7 +3633,7 @@ img.hover-shadow {
     /* background-repeat: no-repeat; */
     background-repeat: repeat;
     background-position: center, center;
-    padding-top: 13.2rem;
+    padding-top: 10rem;
     padding-bottom: 12rem;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
@@ -3968,7 +3981,7 @@ footer a:focus {
 
 .footer-social li::after {
     content: "|";
-    color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.5);
     padding-left: .9rem;
 }
 
@@ -4328,7 +4341,7 @@ article.blog-single .blog-content {
 }
 
 @supports(display:grid) {
-    @media screen and (min-width:700px) {
+    @media screen and (min-width:800px) {
         .schedule {
             display: grid;
         }
@@ -4402,10 +4415,24 @@ hr {
     font-size: 14px;
 }
 
-.title,
+.title-1 {
+    margin: 0;
+    font-size: 1.25em;
+    padding-bottom: .5em;
+    color: rgb(24, 114, 110);
+}
+
+.title-2 {
+    margin: 0;
+    font-size: 1.25em;
+    padding-bottom: .5em;
+    color: #916920;
+}
+
 .time-slot {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.25em;
+    padding: 1em 0;
 }
 
 body {
@@ -4416,13 +4443,7 @@ body {
     counter-increment: session-count;
     /* content: 'Session #'counter(session-count) ': '; */
 
-    /* I turned this off to prevent 'Session #' from showing up on the calendar */
-}
-
-.track-slot,
-.time-slot {
-    font-weight: bold;
-    font-size: .75em;
+    /* I turned this off to prevent 'Session #' from showing up on the calendar -ay*/
 }
 
 span {
@@ -4430,23 +4451,17 @@ span {
 }
 
 .track-1 {
-    background-color: #1259B2;
+    background-color: #52D9D2;
     color: #fff;
+    box-shadow: 1px 1px rgb(24, 114, 110);
+
 }
 
 .track-2 {
-    background-color: #687f00;
+    background-color: #f0b446;
     color: #fff;
-}
+    box-shadow: 1px 1px #916920;
 
-.track-3 {
-    background-color: #544D69;
-    color: #fff;
-}
-
-.track-4 {
-    background-color: #c35500;
-    color: #fff;
 }
 
 .track-many {
@@ -4460,4 +4475,15 @@ span {
 ins {
     text-decoration: none;
     background-color: #ddffdd;
+}
+
+@media screen and (max-width:800px) {
+
+    .time-slot {
+        margin: 0;
+        font-size: 1.25em;
+        padding: 1em 0;
+        text-align: center;
+    }
+
 }
