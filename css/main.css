@@ -66,6 +66,7 @@ body {
     top: 5em;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
 }
 
 .popup h2 {
@@ -121,6 +122,11 @@ body {
         top: 5em;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .popup h2 {
+        font-size: 1.5em;
+        /* font-family: Tahoma, Arial, sans-serif; */
     }
 }
 
