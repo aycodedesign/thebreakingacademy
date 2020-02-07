@@ -952,10 +952,8 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
     background-color: #55D6D1;
-    /* border-color: #b8b8b8; */
     color: #fff;
     border: 0rem;
-    /* outline: 0; */
 }
 
 
@@ -2028,7 +2026,7 @@ img.scrolling {
 .home-content__buttons .btn:focus {
     background: #52D9D2 !important;
     border-color: #52D9D2;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .home-content__scroll {
