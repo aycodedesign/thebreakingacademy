@@ -3976,16 +3976,16 @@ footer a:focus {
     padding-left: 0;
     margin-right: .9rem;
     line-height: 3.9rem;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
-.footer-social li::after {
+/* .footer-social li::after {
     content: "|";
     color: rgba(255, 255, 255, 0.5);
-    padding-left: .9rem;
+    /* padding-left: .9rem; */
 }
 
-.footer-social li i {
+*/ .footer-social li i {
     font-size: 1.7rem;
     line-height: 3rem;
     vertical-align: middle;
